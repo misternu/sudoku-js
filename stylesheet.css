@@ -1,0 +1,39 @@
+.row {
+  width: 459px; }
+
+.bar {
+  background: #bbb;
+  position: absolute; }
+
+#b0 {
+  left: 6px;
+  top: 159px;
+  width: 459px;
+  height: 2px; }
+
+#b1 {
+  left: 6px;
+  top: 312px;
+  width: 459px;
+  height: 2px; }
+
+#b2 {
+  top: 6px;
+  left: 159px;
+  height: 459px;
+  width: 2px; }
+
+#b3 {
+  top: 6px;
+  left: 312px;
+  height: 459px;
+  width: 2px; }
+
+input {
+  text-align: center;
+  font-size: 16.66667px;
+  width: 25px;
+  height: 25px;
+  margin: 10px; }
+
+/*# sourceMappingURL=stylesheet.css.map */

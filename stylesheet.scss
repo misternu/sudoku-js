@@ -1,0 +1,45 @@
+$sq_width: 25;
+$sq_margin: 10;
+$row_width: (($sq_width + 6) + $sq_margin * 2) * 9;
+
+.row {
+  width: $row_width * 1px;
+}
+
+.bar {
+  background: #bbb;
+  position: absolute;
+}
+
+#b0 {
+  left: 6px;
+  top: ($row_width / 3) * 1px + 6px;
+  width: $row_width * 1px;
+  height: 2px;
+}
+#b1 {
+  left: 6px;
+  top: ($row_width * 2 / 3) * 1px + 6px;
+  width: $row_width * 1px;
+  height: 2px
+}
+#b2 {
+  top: 6px;
+  left: ($row_width / 3) * 1px + 6px;
+  height: $row_width * 1px;
+  width: 2px;
+}
+#b3 {
+  top: 6px;
+  left: ($row_width * 2 / 3) * 1px + 6px;
+  height: $row_width * 1px;
+  width: 2px;
+}
+
+input {
+  text-align: center;
+  font-size: ($sq_width/3)  * 2px;
+  width: ($sq_width) * 1px;
+  height: ($sq_width) * 1px;
+  margin: ($sq_margin) * 1px;
+}
