@@ -9,7 +9,6 @@ function solve(board, poss, empties) {
   empties = empties || getEmpties(board);
 }
 
-
 function getPoss(board) {
   var poss = BOARD_RANGE.map(function(x,i) { return NUMBERS.slice() })
   for (index in BOARD_RANGE) {
@@ -19,7 +18,10 @@ function getPoss(board) {
 }
 
 function getEmpties(board) {
-
+  return BOARD_RANGE.reduce(function(array, i) {
+    if (board[i] == "-") { array.push(i) }
+    return array
+  }, [])
 }
 
 function removeItemFromArray(item, array) {
@@ -42,4 +44,4 @@ function elim(index, poss, board) {
   }
 }
 
-console.log(getPoss(puzzle));
+console.log(getEmpties(puzzle));
