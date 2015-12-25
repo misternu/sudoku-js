@@ -55,7 +55,7 @@ $(document).ready(function() {
   previousBoard = getBoard()
 
   $("#solve").click(function(){
-    console.log(getBoard());
+    showBoard(solve(getBoard()));
   });
 
   $(".square").on("change keyup paste click", function() {

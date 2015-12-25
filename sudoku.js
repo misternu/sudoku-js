@@ -7,6 +7,23 @@ function process(board) {
 function solve(board, poss, empties) {
   poss = poss || getPoss(board);
   empties = empties || getEmpties(board);
+  return iterate(board, poss, empties);
+}
+
+function iterate(board, poss, empties) {
+  for (var i = 0; i < empties.length; i++) {
+    if (poss[empties[i]].length == 1) {
+      var newBoard = fillSquare(empties[i], board, poss[empties[i]][0]);
+      elim(empties[i], poss, newBoard);
+      empties.splice(i,1);
+      return iterate(newBoard, poss, empties);
+    }
+  }
+  return board;
+}
+
+function fillSquare(index, board, character) {
+  return board.substring(0,index) + character + board.substring(index+1)
 }
 
 function getPoss(board) {
@@ -44,4 +61,4 @@ function elim(index, poss, board) {
   }
 }
 
-console.log(getEmpties(puzzle));
+showBoard(puzzle);
